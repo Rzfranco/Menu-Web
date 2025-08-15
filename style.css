@@ -6,7 +6,7 @@ body {
     color: #fff; /* Texto blanco para mayor contraste */
 }
 .logo-img {
-    width: 150px; /* Ajusta el tamaño según tu preferencia */
+    width: 200px; /* Ajusta el tamaño según tu preferencia */
     height: auto;
     margin-bottom: 10px;
 }
@@ -169,4 +169,5 @@ footer {
 .copyright {
     margin: 0;
     margin-top: 10px;
+
 }
