@@ -109,7 +109,7 @@ body {
 
 /* Estado expandido */
 .menu-section:not(.collapsed) .menu-items {
-    max-height: 5000px; /* Ajusta este valor para que sea mayor que el contenido más largo */
+    max-height: 1500px; /* Ajusta este valor para que sea mayor que el contenido más largo */
 }
 .menu-section:not(.collapsed) .arrow::after {
     content: "▼";
