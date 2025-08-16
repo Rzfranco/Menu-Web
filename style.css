@@ -82,9 +82,20 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* ... (El resto de tu CSS anterior) ... */
+
+/* ESTILOS DE LA FLECHA Y ACORDEÓN */
+/* ... (Mantén el resto de las reglas de .section-toggle, .toggle-text, .arrow) ... */
+
+.menu-items {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
 /* Estado al cargar la página (colapsado por defecto) */
 .menu-section.collapsed .menu-items {
-    display: none;
+    max-height: 0;
 }
 .menu-section.collapsed .arrow::after {
     content: "▶";
@@ -98,7 +109,7 @@ body {
 
 /* Estado expandido */
 .menu-section:not(.collapsed) .menu-items {
-    display: block;
+    max-height: 500px; /* Ajusta este valor para que sea mayor que el contenido más largo */
 }
 .menu-section:not(.collapsed) .arrow::after {
     content: "▼";
@@ -109,8 +120,6 @@ body {
 .menu-section:not(.collapsed) .toggle-text {
     display: block;
 }
-
-/* FIN DE LOS ESTILOS DE LA FLECHA Y ACORDEÓN */
 
 /* Estilo para los ítems del menú */
 .menu-item {
@@ -193,16 +202,17 @@ footer {
     margin-top: 10px;
 }
 
-
+/* Estilos para el botón "Volver al inicio" */
 #back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #e74c3c;
     color: white;
-    width: 60px; /* Ajusta el ancho para que quepa el texto */
-    height: 60px; /* Ajusta la altura si es necesario */
+    width: 60px;
+    height: 60px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -210,24 +220,23 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.3s ease;
     z-index: 1000;
-    flex-direction: column; /* Alinea la flecha y el texto verticalmente */
-}
-
-#back-to-top span {
-    display: block; /* Asegura que los spans ocupen su propio espacio */
-    text-align: center; /* Centra el contenido dentro de cada span */
-}
-
-#back-to-top span:first-child {
-    font-size: 2rem; /* Tamaño de la flecha */
-    margin-bottom: 2px; /* Espacio entre la flecha y el texto */
-}
-
-#back-to-top span:last-child {
-    font-size: 0.8rem; /* Tamaño del texto "Inicio" */
 }
 
 #back-to-top:hover {
     background-color: #c0392b;
     transform: scale(1.1);
+}
+
+#back-to-top span {
+    display: block;
+    text-align: center;
+}
+
+#back-to-top span:first-child {
+    font-size: 2rem;
+    margin-bottom: 2px;
+}
+
+#back-to-top span:last-child {
+    font-size: 0.8rem;
 }
