@@ -15,7 +15,7 @@ body {
     text-align: center;
     padding: 40px 20px;
     background-color: #1d1c1c; /* Color de respaldo */
-    background-image: url('images/fondo-textura-marmol-negro_322958-1983.avif');
+    background-image: url('images/fondo-textura-marmol-negro_322958-1983.webp');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -32,7 +32,7 @@ body {
 }
 .menu-section {
     background-color: #1d1c1c; /* Color de respaldo */
-    background-image: url('images/fondo-textura-marmol-negro_322958-1983.avif');
+    background-image: url('images/fondo-textura-marmol-negro_322958-1983.webp');
     background-size: cover;
     background-position: center;
     padding: 20px;
