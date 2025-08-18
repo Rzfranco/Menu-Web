@@ -3,15 +3,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll(".menu-section");
 
     sections.forEach(section => {
-        // Asegura que todas las secciones estén colapsadas al cargar la página
         section.classList.add("collapsed");
-
-        // Selecciona el botón para alternar dentro de cada sección
         const toggle = section.querySelector(".section-toggle");
         
-        // Añade el evento de clic
         toggle.addEventListener("click", () => {
-            // Alterna la clase 'collapsed'
+            // 1. Añade la clase .clicked para el efecto de parpadeo
+            toggle.classList.add("clicked");
+            
+            // 2. Remueve la clase .clicked después de 300ms (0.3 segundos)
+            setTimeout(() => {
+                toggle.classList.remove("clicked");
+            }, 500);
+
+            // 3. Alterna la clase 'collapsed' para mostrar/ocultar el contenido
             section.classList.toggle("collapsed");
         });
     });
@@ -19,10 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Código para el desplazamiento suave (smooth scroll)
     const backToTopBtn = document.getElementById("back-to-top");
     
-    // Verifica que el botón exista antes de agregar el evento
     if (backToTopBtn) {
         backToTopBtn.addEventListener("click", function(e) {
-            e.preventDefault(); // Evita el comportamiento por defecto del enlace
+            e.preventDefault();
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
