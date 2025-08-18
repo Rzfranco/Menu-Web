@@ -7,19 +7,20 @@ body {
     color: #fff;
 }
 .logo-img {
-    width: 200px;
+    width: 150px;
     height: auto;
     margin-bottom: 5px;
 }
 
 .header {
     text-align: center;
-    padding: 40px 20px;
+    padding:5px 20px;
     background-color: #1d1c1c; /* Color de respaldo */
     background-image: url('images/fondo-textura-marmol-negro_322958-1983.webp');
     background-size: cover;
     background-position: center;
     color: #fff;
+    border-bottom: 2px solid #333;
 }
 
 .slogan {
@@ -30,6 +31,7 @@ body {
     max-width: 900px;
     margin: 20px auto;
     padding: 0 20px;
+    
 }
 .menu-section {
     background-color: #1d1c1c; /* Color de respaldo */
@@ -40,6 +42,7 @@ body {
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #333;
 }
 .menu-item .item-img {
     width: 80px;
@@ -56,11 +59,11 @@ body {
 /* ESTILOS DE LA FLECHA Y ACORDEÓN */
 .section-toggle {
     text-align: center;
-    color: #e74c3c;
+    color: #b11f0e;
     margin-top: 0;
     font-size: 1.5rem;
     padding-bottom: 5px;
-    border-bottom: 2px solid #e74c3c;
+    border-bottom: 2px solid #b11f0e;
     cursor: pointer;
     position: relative;
     user-select: none;
@@ -175,7 +178,7 @@ footer {
     background-image: url('images/fondo-textura-marmol-negro_322958-1983.avif');
     background-size: cover;
     background-position: center;
-    border-top: 1px solid #333;
+    border-top: 2px solid #333;
 }
 
 .sponsors-container {
@@ -216,8 +219,8 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #e74c3c;
-    color: white;
+    background-color: #b11f0e;
+    color: rgb(0, 0, 0);
     width: 60px;
     height: 60px;
     display: flex;
@@ -232,7 +235,7 @@ footer {
 }
 
 #back-to-top:hover {
-    background-color: #c0392b;
+    background-color: #b11f0e;
     transform: scale(1.1);
 }
 
