@@ -3,14 +3,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll(".menu-section");
 
     sections.forEach(section => {
-        section.classList.add("collapsed");
         const toggle = section.querySelector(".section-toggle");
         
         toggle.addEventListener("click", () => {
             // 1. Añade la clase .clicked para el efecto de parpadeo
             toggle.classList.add("clicked");
             
-            // 2. Remueve la clase .clicked después de 300ms (0.3 segundos)
+            // 2. Remueve la clase .clicked después de 500ms (0.5 segundos)
             setTimeout(() => {
                 toggle.classList.remove("clicked");
             }, 500);
