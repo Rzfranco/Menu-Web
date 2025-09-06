@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // === INICIO: LÓGICA FINAL PARA PERSONALIZADOR DE CARTEL (CON FILTRO DE CARACTERES) ===
 
-    const cartelBtns = document.querySelectorAll('.cartel-btn');
+    const cartelBtn = document.getElementById('cartel-btn');
     const modal = document.getElementById('cartel-modal');
     
     if (modal) {
@@ -48,10 +48,10 @@ document.addEventListener("DOMContentLoaded", function() {
         };
 
         const inventarioLetras = {
-            'A': 4, 'E': 4, 'I': 4, 'O': 4, 'U': 4,
-            'B': 2, 'C': 2, 'D': 2, 'F': 2, 'G': 2, 'H': 2, 'J': 2, 'K': 2,
+            'A': 5, 'E': 3, 'I': 4, 'O': 4, 'U': 4,
+            'B': 2, 'C': 2, 'D': 2, 'F': 3, 'G': 2, 'H': 2, 'J': 2, 'K': 2,
             'L': 2, 'M': 2, 'N': 2, 'Ñ': 2, 'P': 2, 'Q': 2, 'R': 2, 'S': 2,
-            'T': 2, 'V': 2, 'W': 2, 'X': 2, 'Y': 2, 'Z': 2
+            'T': 1, 'V': 2, 'W': 2, 'X': 2, 'Y': 2, 'Z': 2
         };
 
         function renderizarLetrasDisponibles(letrasUsadas = {}) {
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // Asignación de eventos (sin cambios)
-        cartelBtns.forEach(btn => btn.addEventListener('click', abrirModal));
+        cartelBtn.addEventListener('click', abrirModal);
         closeModalBtn.addEventListener('click', cerrarModal);
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
